@@ -32,7 +32,7 @@ class PlayerFeatures:
     last_seen_frame: int
     
 class AdvancedPlayerTracker:
-    def __init__(self, model_path: str, max_disappeared: int = 30):
+    def __init__(self, model_path: str, max_disappeared: int = 45):
         """
         Initialize the advanced player tracking system
         
@@ -56,8 +56,8 @@ class AdvancedPlayerTracker:
             self.hog = cv2.HOGDescriptor()
             
             # Tracking parameters
-            self.position_weight = 0.3
-            self.appearance_weight = 0.4
+            self.position_weight = 0.2
+            self.appearance_weight = 0.3
             self.team_weight = 0.2
             self.size_weight = 0.1
             
